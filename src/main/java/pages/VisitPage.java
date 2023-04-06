@@ -7,7 +7,6 @@ public class VisitPage {
 
   ChromeDriver driver;
 
-
   private static WebElement element;
 
   public VisitPage(ChromeDriver driver) {

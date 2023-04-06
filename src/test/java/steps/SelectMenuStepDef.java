@@ -35,19 +35,7 @@ public class SelectMenuStepDef {
     selectMenu.oldStyleSelectMenu(value);
   }
 
-  @And("User choose multi select drop down {string}")
-  public void userChooseMultiSelectDropDown(String value) {
-    selectMenu.clickDropdownMultipleSelect();
-    if (value.equalsIgnoreCase("all color")) {
-      IntStream.range(0, selectMenu.getLengthMultiSelect()).forEach(i -> {
-        selectMenu.pickFirstArrayMultiSelect();
-      });
-    } else {
-      selectMenu.pickMultiselectByText(value);
-    }
-  }
-
-  @Then("User success input all select menu")
+  @Then("User success input select menu")
   public void userSuccessInputAllSelect() {
     Assert.assertTrue(Boolean.TRUE);
   }

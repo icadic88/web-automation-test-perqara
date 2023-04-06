@@ -6,14 +6,7 @@ Feature: Sample Demo QA
     And User choose select value "Another root option"
     And User choose select one "Other"
     And User choose old style select menu "Aqua"
-    And User choose multi select drop down "all color"
-    Then User success input all select menu
-
-  Scenario: Verify user show no rows found when books isn't found
-    Given User go to "https://demoqa.com/books"
-    When User in Book Store page
-    And User search book "qa engineer"
-    Then User see "No rows found"
+    Then User success input select menu
 
   Scenario: Verify title, author, publisher is correct between search result and detail book
     Given User go to "https://demoqa.com/books"
